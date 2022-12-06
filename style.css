@@ -1,0 +1,78 @@
+:root {
+  --dark-red: #710707;
+  --bg-green: #32741d;
+  --bg-gray: #c4c4c4;
+  --gr-vall: 1%;
+  --gr-valr: 0%;
+}
+
+*[handler] {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 700px;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid var(--bg-green);
+  background-color:rgb(124, 168, 197);
+}
+
+.bird-image{
+  margin-top: 15px;
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.audio-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player-icon {
+  width: 32px;
+  height: 32px;
+  background-size: 30px 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("./play.svg");
+  margin-right: 15px;
+  border: 0;
+  outline: 0;
+  transition: .3s;
+}
+
+.player-icon:hover {
+  transform: scale(1.05);
+}
+
+.progress {
+  height: 8px;
+  appearance: none;
+  width: 100%;
+  background: linear-gradient(to right, #710707 0%, #710707 var(--gr-vall), #c4c4c4 var(--gr-valr), #c4c4c4 100%);
+  transition: all 0.3s ease-in;
+  border-radius: 5px;
+  overflow: visible;
+  cursor: ew-resize;
+}
+
+.progress::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: var(--bg-green);
+  cursor: ew-resize;
+  border-radius: 50%;
+  border: 0.5 solid black;
+}
+
+.progress:hover {
+  transition: 0.3s;
+  opacity: 0.6;
+}
